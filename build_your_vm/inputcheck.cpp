@@ -575,7 +575,7 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 	if (strlen(argv[1]) > KEY_LEN) {
-		printf("more than 27 bytes \n");
+		printf("more than 0x2F bytes \n");
 		return 0;
 	}
 	VM *vm = new VM;
@@ -594,10 +594,10 @@ int main(int argc, char *argv[]) {
 	vm->vm_run();
 	vm->vm_out(x);
 	if (x->r0 == 1) {
-		printf("27 bytes user-input is hexadecimal number \n");
+		printf("0x2F bytes user-input is hexadecimal number \n");
 	}
 	else {
-		printf("bad char exists or less than 27 bytes \n");
+		printf("bad char exists or less than 0x2F bytes \n");
 	}
 	delete[] s;
 	delete[] y;
